@@ -15,7 +15,7 @@ function Buttons() {
 
   return (
     <div>
-      <p>Count: {count}</p>
+      <p>{count}</p>
       <button onClick={() => setCount(count + 1)}>Increase</button>
       <button onClick={() => setCount(count - 1)}>Decrease</button>
     </div>
