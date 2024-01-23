@@ -18,8 +18,7 @@ function App() {
 function Count({ count, setCount }) {
   return (
     <div>
-      <CountRenderer/>{" "}
-      <Buttons setCount={setCount} />
+      <CountRenderer /> <Buttons setCount={setCount} />
     </div>
   );
 }
@@ -29,7 +28,7 @@ function CountRenderer() {
   return <div>{count}</div>;
 }
 
-function Buttons({setCount }) {
+function Buttons({ setCount }) {
   const count = useContext(CountContext);
   return (
     <div>
