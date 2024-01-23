@@ -5,38 +5,31 @@
 // useRecoilvalue
 // useSetRecoilState
 // and selector
-import { useState } from "react";
+
 import "./App.css";
-import { useContext } from "react";
-import { CountContext } from "./context";
 
 function App() {
-  const [count, setCount] = useState(0);
   return (
     <div>
-      <CountContext.Provider value={count}>
-        <Count setCount={setCount} />
-      </CountContext.Provider>
+      <Count />
     </div>
   );
 }
 
-function Count({ count, setCount }) {
+function Count() {
   console.log("OH CRAP");
   return (
     <div>
-      <CountRenderer /> <Buttons setCount={setCount} />
+      <CountRenderer /> <Buttons />
     </div>
   );
 }
 
 function CountRenderer() {
-  const count = useContext(CountContext);
   return <div>{count}</div>;
 }
 
-function Buttons({ setCount }) {
-  const count = useContext(CountContext);
+function Buttons() {
   return (
     <div>
       <button onClick={() => setCount(count + 1)}>Increase</button>
