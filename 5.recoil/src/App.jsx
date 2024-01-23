@@ -1,4 +1,10 @@
-//Wrap anyone who wants to use the teleported value inside a provider
+//Decent List of things to learn in recoil are
+// RecoilRoot
+// atom
+// useRecoilState
+// useRecoilvalue
+// useSetRecoilState
+// and selector
 import { useState } from "react";
 import "./App.css";
 import { useContext } from "react";
@@ -16,6 +22,7 @@ function App() {
 }
 
 function Count({ count, setCount }) {
+  console.log("OH CRAP");
   return (
     <div>
       <CountRenderer /> <Buttons setCount={setCount} />
