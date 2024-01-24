@@ -19,11 +19,18 @@ function App() {
     <div>
       <RecoilRoot>
         <Count />
+        <OddorEven></OddorEven>
       </RecoilRoot>
     </div>
   );
 }
-
+function OddorEven() {
+  const count = useRecoilValue(countAtom);
+  if (count % 2 == 0) {
+    return <p>The number is even</p>;
+  }
+  // return <h1>The number is odd</h1>;
+}
 function Count() {
   console.log("OH CRAP");
   return (
